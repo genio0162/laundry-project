@@ -1,0 +1,120 @@
+
+/* testimonials */
+.testimonials-area{
+    .testmonial-item{
+        .rating i {
+            font-size: 15px;
+            color: #FBBA42;
+        }
+        p {
+            color: #1D2547;
+            font-size: 18px;
+            @media #{$md}{
+                margin-bottom: 19px;
+            }
+            @media #{$sm}{
+                margin-bottom: 19px;
+                br{
+                    display: none;
+                }
+            }
+            @media #{$xs}{
+                margin-bottom: 19px;
+                font-size: 16px;
+                br{
+                    display: none;
+                }
+            }
+        }
+        .pera {
+            margin-bottom: 21px;
+        }
+        p.textimonial-pra {
+            margin-bottom: 40px;
+            color: #1D2547;
+            font-size: 40px;
+            font-style: italic;
+        }
+    }
+    .testmonial-nav {
+        width: 206px;
+        text-align: center;
+        margin: auto;
+        button {
+            color: #1D2547;
+            font-size: 21px;
+
+            i {
+                cursor: pointer;
+                color: #1D2547;
+                transition: .4s;
+                display: block;
+                padding: 20px;
+            }
+            &.slick-next {
+                right: -239%;
+                @media #{$lg}{
+                    right: -185%;
+                }
+                @media #{$md}{
+                    display: none !important;
+                }
+                @media #{$sm}{
+                    display: none !important;
+                }
+                @media #{$xs}{
+                    display: none !important;
+                }
+            }
+            &.slick-prev {
+                left: -241%;
+                @media #{$lg}{
+                    left: -189%;
+                }
+                @media #{$md}{
+                    display: none !important;
+                }
+                @media #{$sm}{
+                    display: none !important;
+                }
+                @media #{$xs}{
+                    display: none !important;
+                }
+                
+            }
+        }
+    }
+
+    .testmonial-nav button {
+        background: none;
+        position: absolute;
+        top: 193%;
+        color: #1D2547;
+        transform: translateY(-50%);
+        border: none;
+        font-size: 21px;
+        z-index: 1;
+        padding: 11px;
+    }
+    .testmonial-thumb img {
+        transform: scale(0.6);
+        transition: .6s;
+        opacity: 0.4;
+    }
+    
+    .testmonial-thumb.slick-center img {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-initialized .slick-slide {
+    outline: 0;
+}

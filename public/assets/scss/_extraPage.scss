@@ -1,0 +1,50 @@
+.single-projects{
+    .singel-details{
+        span{
+            color: #FA8F77;
+            font-size: 30px;
+            margin-bottom: 27px;
+            display: block;
+        }
+        h3{
+            font-size: 20px;
+            display: block;
+            color: #072366;
+            font-weight: 800;
+            text-transform: capitalize;
+            line-height: 1.4;
+            @media #{$lg}{
+                font-size: 15px;
+            }
+            @media #{$sm}{
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+.single-projects-img {
+    .singel-details-img{
+       img{
+            width: 100%;
+       }
+    }
+}
+.experience.experience2{
+    padding-left: 30px;
+    span{
+        font-size:50px;
+        @media #{$xs}{
+            font-size:32px;
+        }
+    }
+    @media #{$md}{
+        padding-bottom: 30px;
+    }
+    @media #{$sm}{
+        padding-bottom: 30px;
+    }
+    @media #{$xs}{
+        padding-bottom: 30px;
+    }
+}

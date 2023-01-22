@@ -1,0 +1,225 @@
+
+.header-area {
+    // Header Top
+    @media #{$md}{
+        box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    }
+    @media #{$sm}{
+        box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    }
+    @media #{$xs}{
+        box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    }
+}
+
+// Header Bottom
+.main-header{
+    // position: relative;
+    // z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // mobile menu show
+    @media #{$md}{
+        padding: 17px 0px;
+    }
+    @media #{$sm}{
+        padding: 17px 0px;
+    }
+    @media #{$xs}{
+        padding: 17px 0px;
+    }
+    // Header Left
+    .header-left{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        .logo{
+            padding-left: 50px;
+            @media #{$lg}{
+                padding-left: 15px;
+            }
+            @media #{$md}{
+                padding-left: 15px;
+            }
+            @media #{$sm}{
+                padding-left: 15px;
+            }
+            @media #{$xs}{
+                padding-left: 15px;
+            }
+        }
+        .main-menu{
+            padding-left: 40px;
+            @media #{$lg}{
+                padding-left: 15px;
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    position: relative;
+                    z-index: 1;
+                    a{
+                        font-family: $font_2;
+                        color: #0d2d3e;
+                        font-weight: 700;
+                        padding: 33px 21px;
+                        display: block;
+                        font-size: 16px;
+                        text-transform: capitalize;
+                        @include transition(.3s);
+                        @media #{$lg}{
+                            padding: 33px 9px !important;
+                        }
+    
+                    }
+                    &:hover{
+                        & > a{
+                            color:$theme-color;
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            padding-right: 0;
+                        }
+                    }
+                    // Active Line
+                    &.active{
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 3px;
+                            background: $theme-color;
+                            bottom: 0;
+                            margin: 0 auto;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+                ul.submenu{
+                    position: absolute;
+                    width: 170px;
+                    background: rgba(103, 133, 255,.8);
+                    left: 0;
+                    top: 90%;
+                    visibility: hidden;
+                    opacity: 0;
+                    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+                    padding: 17px 0;
+                    // border-top: 5px solid $theme-color;
+                    @include transition(.3s);
+                    & > li{
+                        margin-left: 7px;
+                        display: block;
+                        & > a{
+                            padding: 6px 10px !important;
+                            font-size: 15px;
+                            color: #fdfdfd;
+                            &:hover{
+                                // color:$theme-color;
+                                background: none;
+                                padding-left: 13px !important;
+                            }
+                            & i{
+                                // @include transition(.4s);
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    .header-right{
+
+    }
+}
+// Hover Show Sub-menu
+.main-header .header-left .main-menu ul > li:hover > ul.submenu {
+	visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+ 
+.header-transparent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9;
+}
+
+
+
+//! header Sticky  & Responsive
+.header-area{
+    .header-sticky{
+        &.sticky-bar{
+            background: #fff;
+                .main-menu{
+                   nav > ul {
+                       & > li{
+                          & >  a {
+                                padding: 33px 21px;
+                            }
+                        }
+                    }
+                } 
+                // Small device sticky show padding
+                @media #{$md}{
+                    padding: 15px 0px;
+                }
+                @media #{$sm}{
+                    padding: 15px 0px;
+                }
+                @media #{$xs}{
+                    padding: 15px 0px;
+                } 
+
+        }
+    }
+}
+
+
+//! Mobile Menu
+.mobile_menu {
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    z-index: 99;
+    .slicknav_menu {
+        background: transparent;
+        margin-top: 0px !important;
+        .slicknav_btn {
+            top: -30px;
+            // mobile Menu button color
+            .slicknav_icon-bar {
+                background-color: $theme-color !important;
+            }
+        }
+        .slicknav_nav{
+            margin-top: 9px !important;
+            // box-shadow: 0 0 10px 3px rgba(141, 140, 140, 0.5);
+            a:hover {
+                background: transparent;
+                color: $theme-color;
+            }
+            a {
+                font-size: 15px;
+                padding: 7px 10px;
+            }
+            // Dropdown Menu button Padding None
+        .slicknav_item a {
+                padding: 0 !important;
+            }
+        }
+    }
+}
+
+
+

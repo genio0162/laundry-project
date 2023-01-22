@@ -1,0 +1,91 @@
+
+.gallery-area{
+    .single-gallery{
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            content: "";
+            background-color: rgba(1,10,28,0.4);
+            opacity: 0;
+            z-index: 1;
+            @include transition(.4s);
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+                visibility:visible;
+                }
+        }
+        // img
+        .gallery-img{
+            position: relative;
+            height: 565px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @media #{$xs}{
+                height: 420px;
+            }
+        }
+        // Caption
+        .thumb-content-box {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 100%;
+            transition: .4s;
+            z-index: 2;
+            .thumb-content {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                h3 {
+                    color: #ffffff;
+                    font-weight: 800;
+                    font-size: 22px;
+                    margin-bottom: 26px;
+                    text-transform: uppercase;
+                    @media #{$laptop}{
+                        font-size: 25px;
+                    }
+                    @media #{$lg}{
+                        font-size: 32px;
+                    }
+                    @media #{$xs}{
+                        font-size: 32px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                    color: #ffff;
+                    padding: 0 82px;
+                    line-height: 1.6;
+                    @media #{$xs}{
+                        padding: 0 18px;
+                    }
+                }
+                a {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    &:hover {
+                        color: #fff;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
